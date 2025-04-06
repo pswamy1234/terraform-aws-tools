@@ -82,6 +82,7 @@ resource "aws_key_pair" "tools" {
   public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJJx/tR9Iby5e+4dJT0aEtrse0Jou4uziDf0Zw2pTjxR puttiswamy123@gmail.com"
 }
 
+
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
   version = "~> 2.0"
