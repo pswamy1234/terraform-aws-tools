@@ -79,7 +79,7 @@ module "nexus" {
 
 resource "aws_key_pair" "tools" {
   key_name   = "tools"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEYn+rL+JZj7U3WVQVAXKGaS9IlHoSV8yR0nmnXTXPkw puttiswamy123@gmail.com"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJJx/tR9Iby5e+4dJT0aEtrse0Jou4uziDf0Zw2pTjxR puttiswamy123@gmail.com"
 }
 
 module "records" {
