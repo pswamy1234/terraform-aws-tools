@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "swamy-fun-remote-state-123456"
-    key            = "jenkins-testing"
+    bucket         = "swamy-jenkins"
+    key            = "jenkins-test-1"
     region         = "us-east-1"
-    dynamodb_table = "swamy.fun-locking"
+    dynamodb_table = "swamy-locking"
   }
 }
 
