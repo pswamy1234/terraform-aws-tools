@@ -32,6 +32,7 @@ module "jenkins_agent" {
   # convert StringList to list and get first element
   subnet_id = "subnet-06019b3c21801bd27"
   ami = data.aws_ami.ami_info.id
+  associate_public_ip_address = true
   key_name = aws_key_pair.Swamy.key_name
   user_data = file("jenkins-agent.sh")
   tags = {
