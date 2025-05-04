@@ -97,3 +97,23 @@ module "records" {
   ]
   
 }
+
+resource "aws_security_group_rule" "allow_jenkins_8080" {
+  type                     = "ingress"
+  from_port                = 8080
+  to_port                  = 8080
+  protocol                 = "tcp"
+  cidr_blocks              = ["0.0.0.0/0"] # Or restrict to your office/VPN IP
+  security_group_id        = "sg-03931b1bad72d1a95"
+  description              = "Allow access to Jenkins UI on port 8080"
+}
+
+resource "aws_security_group_rule" "allow_nexus_8081" {
+  type                     = "ingress"
+  from_port                = 8081
+  to_port                  = 8081
+  protocol                 = "tcp"
+  cidr_blocks              = ["0.0.0.0/0"] # Or restrict as needed
+  security_group_id        = "sg-03931b1bad72d1a95"
+  description              = "Allow access to Nexus UI on port 8081"
+}
